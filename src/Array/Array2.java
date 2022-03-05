@@ -18,8 +18,9 @@ public class Array2
     {
         System.out.println("array  element is=="+arr[i]);
          sum = sum+arr[i];
-        System.out.println("sum is"+sum);
     }
+        System.out.println("sum is"+sum);
+    
     
 	}
 

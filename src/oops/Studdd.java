@@ -1,10 +1,18 @@
 package oops;
-
+import java.util.*;
 public class Studdd {
 
 	public static void main(String[] args) 
 	{ 
-		String name;
+		Studdd(String name,int rno)
+		{
+			this.name=name;
+			this.rno=rno;
+		}
+		
+		
+		
+		
 	     int  rno;
 	  public  void String getName()
 	  {
@@ -15,4 +23,5 @@ public class Studdd {
 		this.name=name;
 	}
 	}
-}
+
+	}

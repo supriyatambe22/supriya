@@ -55,4 +55,6 @@ public class Multiple  extends Stud7 implements Stud4,Stud5
 
 	}
 
-}
+
+		
+	}

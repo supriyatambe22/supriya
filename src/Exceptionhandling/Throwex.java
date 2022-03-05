@@ -19,7 +19,7 @@ public class Throwex
 		}
 		else
 		{
-			System.out.println("wrong ip");
+			System.out.println("ip is ");
 		}
 	}
 
@@ -27,7 +27,7 @@ public class Throwex
 	{
         try
         {
-        	studage(-3);
+        	studage(6);
         	
         }
         catch(Myexception e)

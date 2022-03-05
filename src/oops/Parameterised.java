@@ -26,7 +26,7 @@ package oops;
 		{
 		public static void main (String args[])
 		{
-		Parameterised1 obj=new  Parameterised1(2,5);
+		Parameterised1 obj=new  Parameterised1(2,3);
 		obj.show();
 		Parameterised1 obj1=new Parameterised1(2,4,5);
 		obj1.display();
