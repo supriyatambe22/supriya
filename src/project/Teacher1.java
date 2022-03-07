@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Scanner;
 
- class Teacher {
+ class Teacher1 {
 	private String Name;
 	private String Address;
 	private  String Mob_no;
@@ -14,7 +14,7 @@ import java.util.Scanner;
     private String Subject;
     private String Salary;
     private String ID;
-	public Teacher(String Name, String Address, String Mob_no, String Emailid,String Subject,String Salary,String ID) 
+	public Teacher1(String Name, String Address, String Mob_no, String Emailid,String Subject,String Salary,String ID) 
 	{
 
 		this.Name = Name;

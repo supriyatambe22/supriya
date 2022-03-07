@@ -12,14 +12,17 @@ public class Mainclass {
 	public static void main(String[] args) {
 		// Student student = new Student();
 		List<Student> al1 = new ArrayList<Student>();
-		List<Teacher> al=new ArrayList<Teacher>();
+		List<Teacher1> al=new ArrayList<Teacher1>();
 
 		Scanner scn1 = new Scanner(System.in);
 		Scanner sc = new Scanner(System.in);
 		char ch;
 
-		do
-		{System.out.println("=========================================================");
+		do {
+		System.out.println("==============WELCOME TO EDUBRIDGE=======================");
+		System.out.println("=========================================================");
+		System.out.println("================SchoolManagementSystem==================");
+		System.out.println("=========================================================");
 
 		System.out.print("\nYour  Choice  is=:\n1.STUDENT\n2.TEACHER");
 		System.out.println("\n=========================================================");
@@ -46,10 +49,10 @@ public class Mainclass {
      			System.out.println("=========================================================");
 
      			System.out.print("\nYour  Choice  is=:\n1.ADD\n2.DISPLAY\n\n3.DELETE\n\n4.SEARCH\n\n5.UPDATE");
-     			System.out.println("\n=========================================================");
+     			System.out.println("\n===========================================================================");
      			System.out.println("Enter the choice: ");
      			 num = sc.nextInt();
-     			System.out.println("\n=========================================================");
+     			System.out.println("\n============================================================================");
 
      			switch (num) {
      			case 1:
@@ -74,32 +77,31 @@ public class Mainclass {
 
      			case 2:
 
-     				System.out.println(
-     						"================================================================================================");
+     				System.out.println("=========================================================================================================================");
      				System.out.println("Name" + "\t\t" + "Address" + "\t\t\t" + "Mon_no" + "\t\t\t" + "Emailid" + "\t\t\t"
      						+ "Grade" + "\t\t" + "Fees" + "\t\t" + "ID");
-     				System.out.println(
-     						"\n=============================================================================================");
-     				for (Student s : al1) {
-     					System.out.println(s.toString());
-     				}
+     				System.out.println("\n=======================================================================================================================");
+//     				for (Student s : al1)
+//     				{
+//     					System.out.println(s.toString());
+//     				}
 
      				Iterator<Student> it = al1.iterator();
-//     				while (it.hasNext()) {
-//     					Student s = it.next();
-//     					System.out.println(s);
-     //
-//     				}
-     				System.out.println(
-     						"\n================================================================================================");
+     				 while(it.hasNext())
+          		    {  
+          		    	Student  s=it.next();
+          				System.out.println(s);
+
+          		    }
+
+     				System.out.println("\n================================================================================================");
 
      				break;
      			case 3:
      				boolean found = false;
      				System.out.println("Enter a ID to delete ");
      				ID = scn1.next();
-     				System.out.println(
-     						"=======================================================================================================");
+     				System.out.println("\n=======================================================================================================");
      				it = al1.iterator();
      				while (it.hasNext()) {
      					Student s = it.next();
@@ -117,8 +119,7 @@ public class Mainclass {
      				} else {
      					System.out.println("Record is deleted");
      				}
-     				System.out.println(
-     						"============================================================================================================");
+     				System.out.println("============================================================================================================");
 
      				break;
 
@@ -126,12 +127,8 @@ public class Mainclass {
      				found = false;
      				System.out.println("Enter a ID to search ");
      				ID = scn1.next();
-     				System.out.println(
-     						"===========================================================================================================");
+     				System.out.println("===========================================================================================================");
 
-//                     it = al1.iterator();
-//     				while (it.hasNext()) {
-//     					Student s = it.next();
      				for (Student s : al1) {
      					if (s.getID().equalsIgnoreCase(ID)) {
      						System.out.println(s.toString());
@@ -145,15 +142,13 @@ public class Mainclass {
      					System.out.println("Record not found");
 
      				}
-     				System.out.println(
-     						"===============================================================================================================");
+     				System.out.println("===============================================================================================================");
      				break;
      			case 5:
      				found = false;
      				System.out.println("Enter a ID to update ");
      				ID = scn1.next();
-     				System.out.println(
-     						"====================================================================================================================");
+     				System.out.println("====================================================================================================================");
      				for (Student s : al1) {
      					if (s.getID().equalsIgnoreCase(ID)) {
      						System.out.print("\nName: ");
@@ -182,8 +177,7 @@ public class Mainclass {
      					System.out.println("Record update successfully");
 
      				}
-     				System.out.println(
-     						"========================================================================================================");
+     				System.out.println("\n========================================================================================================");
      				break;
 
      			default:
@@ -237,7 +231,7 @@ public class Mainclass {
      		TID=scn1.next();
 
      	
-           al.add(new Teacher(TName,TAddress,TMob_no,TEmailid,TSubject,TSalary,TID));
+           al.add(new Teacher1(TName,TAddress,TMob_no,TEmailid,TSubject,TSalary,TID));
      		break;
      		
      case 2:
@@ -246,10 +240,10 @@ public class Mainclass {
      			System.out.println("Name"+"\t\t"+"Address"+"\t\t\t"+"Mon_no"+"\t\t\t"+"Emailid"+"\t\t\t"+"Subject"+"\t\t"+"Salary");
      			System.out.println("\n=============================================================================================");
 
-     		    Iterator<Teacher> it=al.iterator();
+     		    Iterator<Teacher1> it=al.iterator();
      		    while(it.hasNext())
      		    {  
-     		    	Teacher s=it.next();
+     		    	Teacher1 s=it.next();
      				System.out.println(s);
 
      		    }
@@ -258,13 +252,13 @@ public class Mainclass {
                   break;
      case 3:
             boolean found=false;
-     	   System.out.println("Enter a ID to delete ");
+     	   System.out.println("\nEnter a ID to delete ");
      	    ID=scn1.next();
-     		System.out.println("=======================================================================================================");
+     		System.out.println("\n=======================================================================================================");
      		it=al.iterator();
      		while (it.hasNext())
      		{
-					Teacher s = it.next();
+					Teacher1 s = it.next();
 					if (s.getID().equalsIgnoreCase(ID))
 					{
 						it.remove();
@@ -289,11 +283,11 @@ public class Mainclass {
      	   
      case 4:
      		 found=false;
-     		  System.out.println("Enter a ID to search ");
+     		  System.out.println("\nEnter a ID to search ");
      		    ID=scn1.next();
      			System.out.println("===========================================================================================================");
      			
-     		    	for (Teacher s : al) {
+     		    	for (Teacher1 s : al) {
      					if (s.getID().equalsIgnoreCase(ID))
      					{
      						System.out.println(s.toString());
@@ -317,7 +311,7 @@ public class Mainclass {
      	  System.out.println("Enter a ID to update ");
      	    ID=scn1.next();
      		System.out.println("====================================================================================================================");
-     		for(Teacher s:al)
+     		for(Teacher1 s:al)
      	    	{
      			if(s.getID().equalsIgnoreCase(ID))
      			{
@@ -335,7 +329,7 @@ public class Mainclass {
           		TSalary=scn1.next();
           		System.out.println("\nID");
           		TID=scn1.next();
-                al.set(al.indexOf(s),new Teacher(TName,TAddress,TMob_no,TEmailid,TSubject,TSalary,TID));
+                al.set(al.indexOf(s),new Teacher1(TName,TAddress,TMob_no,TEmailid,TSubject,TSalary,TID));
                 found=true;
      	    	}
 
